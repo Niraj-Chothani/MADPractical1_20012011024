@@ -1,50 +1,47 @@
-import java.util.*
-
 fun main() {
-    println("deepToString method: ")
-    val arr = arrayOf(intArrayOf(1, 2), intArrayOf(3, 4), intArrayOf(5, 6, 7))
-    println(Arrays.deepToString(arr))
+    val a1 = arrayOf(10,90,60,80,100)
+    println("Create Array-1 by using arrayOf() method:")
+    println(a1.contentToString())
+    val a2 = Array(5){0}
+    println(a2.contentToString())
+    val a3 = Array(8) { i -> i * 1 }
+    println(a3.contentToString())
+    val a4 = IntArray(5){0}
+    println(a4.joinToString())
+    val a5 = intArrayOf(12,10,1,5,18,19)
+    println(a5.joinToString())
+    val a6 = arrayOf(
+        intArrayOf(1,3),
+        intArrayOf(4,5),
+        intArrayOf(6,7)
+    )
+    println(a6.contentDeepToString())
 
-    println("contentDeepToString method: ")
-    println(arr.contentDeepToString())
-
-    println("jointostring method:")
-    val num = arrayOf(1, 2, 3)
-    println(num.joinToString(":"))
-
-    println("For loops: Range, downTo and until")
-    for (i in 1..5)
-        print(" " + i)
-    println()
-    for (i in 5 downTo 1)
-        print(" " + i)
-    println()
-    for (i in 1 until 5)
-        print(" " + i)
-    println()
-    val a = arrayOf(10, 20, 30)
-    for (i in a)
-        print(" " + i)
-    println()
-
-    println("Sort the array using in-built method and without in-built method:")
-    val array1 = arrayOf(2, 0, 90, 12, 43, 11, 4, 1)
-    array1.sort()
-    print(Arrays.toString(array1))
-    println()
-
-    val array2 = arrayOf(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
-    var temp:Int
-    for (i in array2.indices) {
-        for (j in i+1 until array2.size) {
-            if (array2[i] > array2[j]) {
-                temp = array2[i]
-                array2[i] = array2[j]
-                array2[j] = temp
+    val a7 = IntArray(5){1}
+    println("Please Enter Array Value:")
+    for (i in a7.indices){
+        print("a[$i]=")
+        a7[i] = readLine()!!.toInt()
+    }
+    println("Entered Array:")
+    println(a7.contentToString())
+    a7.sort()
+    println("***********With Built-in Function***********")
+    println("After sorting by built-in function:")
+    println(a7.joinToString())
+    val a8 = arrayOf(56,23,49,12,2)
+    println("***********Without Built-in Function***********")
+    println("Before Sorting:")
+    println(a8.joinToString())
+    for (i in a8.indices){
+        for (j in a8.indices){
+            if(a8[i]<a8[j]){
+                val temp = a8[i]
+                a8[i] = a8[j]
+                a8[j] = temp
             }
         }
     }
-    for (i in array2) {
-        print(" " + i)
-    }
+    println("After Sorting without built-in function:")
+    println(a8.joinToString())
 }
