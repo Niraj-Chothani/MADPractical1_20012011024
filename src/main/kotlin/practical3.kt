@@ -1,7 +1,7 @@
 fun main()
 {
     print("Student En. No :")
-    val x = readLine()!!.toInt()
+    val x = readLine()!!.toLong()
 
     print("Student Name : ")
     val a = readLine()

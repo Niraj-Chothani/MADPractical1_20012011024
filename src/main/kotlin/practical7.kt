@@ -1,5 +1,5 @@
 fun main(args: Array<String>) {
-    val number = 6
+    val number = 4
     val factorial = fact(number)
     println("Factorial of $number is: $factorial")
 }
