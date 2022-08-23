@@ -1,41 +1,25 @@
-fun main() {
-    println("Enter Any Operation.")
-    var x= readLine()!!.toString()
-    val ans = AO("$x",45,9)
-    println(ans)
+fun arithmetic(a:Int, b:Int, c:Int) {
+    when(c) {
+        1->{
+            println("Answer: " + (a+b))
+        }
+        2->{
+            println("Answer: " + (a - b))
+        }
+        3->{
+            println("Answer: " + (a * b))
+        }
+        4->{
+            println("Answer: " + (a / b))
+        }
+    }
 }
 
-fun AO(o:String,vararg numArray:Int):Int{
-    when(o){
-        "+"->{
-            var result = 0
-            for (num in numArray){
-                result += num
-            }
-            return result
-        }
-        "-"->{
-            var result = 2*numArray[0]
-            for (num in numArray){
-                result -= num
-            }
-            return result
-        }
-        "*"->{
-            var result = 1
-            for (num in numArray){
-                result *= num
-            }
-            return result
-        }
-        "/"->{
-            var result = numArray[0]*numArray[0]
-            for (num in numArray){
-                result /= num
-            }
-            return result
-        }
-        else-> return -1
-    }
-    return -1
+fun main() {
+    println("Enter the two values: ")
+    var a = readLine()!!.toInt()
+    var b = readLine()!!.toInt()
+    println("1. Sum\n2. Sub\n3. Mul\n4. Div")
+    var c = readLine()!!.toInt()
+    arithmetic(a, b, c)
 }
