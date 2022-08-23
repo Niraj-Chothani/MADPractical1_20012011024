@@ -14,7 +14,7 @@
 ![Screenshot (357)](https://user-images.githubusercontent.com/104091927/183473804-5981f6bd-3ae5-4eec-a14a-cac02e0a4191.png)
 
 #6. By using a user defined function perform all arithmetic operations
-![Screenshot (358)](https://user-images.githubusercontent.com/104091927/183473805-ce53e966-2a53-4c6e-9abb-250299b7c771.png)
+![Screenshot (367)](https://user-images.githubusercontent.com/104091927/186149725-17f01d29-c9e0-4de9-9cff-59f27afb58ba.png)
 
 #7. Find the factorial of number by recursion. Explain "tailrec" keyword.
 ![Screenshot (360)](https://user-images.githubusercontent.com/104091927/186145585-6bc9fdf2-01a8-4b11-98ee-ef171677d94a.png)
