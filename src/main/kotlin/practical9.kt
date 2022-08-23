@@ -1,16 +1,19 @@
 fun main() {
-    var intArrayList = arrayListOf<Int>()
-
-    for (i in 0..4){
-        print("a[$i]=")
-        intArrayList.add(readLine()!!.toInt())
+    val a = arrayOf(8,5,3,7,6,2)
+    println("The given array is: ")
+    for (i in 0..a.size-1)
+    {
+        print(" " + a[i])
     }
-    var max = intArrayList[0]
-    for (i in 0 until intArrayList.size){
-        if(max<intArrayList[i]){
-            max = intArrayList[i]
+    println()
+
+    var maxele = a[0]
+    for (i in a)
+    {
+        if (maxele < i)
+        {
+            maxele = i
         }
     }
-
-    println("Largest Element = $max")
+    println("The maximum number is: $maxele")
 }
